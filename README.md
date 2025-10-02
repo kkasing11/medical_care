@@ -1,0 +1,1 @@
+- Install Koala to compile scss code.
