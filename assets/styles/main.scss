@@ -1,0 +1,123 @@
+@import './utils/variables.scss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  height: 100vh;
+
+  .header-bar {
+    cursor: default;
+    height: 56px;
+
+    .navbar {
+      height: inherit;
+    }
+
+    .button-sidenav {
+      cursor: pointer;
+      margin-right: 15px;
+      font-weight: 700;
+    }
+
+    .logo-page {
+      font-size: 24px;
+    }
+  }
+
+  .main-content {
+    height: calc(100% - 56px);
+    overflow-y: auto;
+
+    .content-inner {
+      overflow-y: auto;
+    }
+  }
+
+  .side-bar {
+    width: 280px;
+    margin-left: -280px;
+    transition: margin .3s ease-in-out;
+
+    .nav-pills {
+      overflow: auto;
+      display: flex;
+      flex-wrap: wrap;
+
+      .nav-item { 
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
+    }
+
+    &.active {
+      margin-left: 0;
+    }
+
+    .nav-item {
+      cursor: pointer;
+
+      .nav-link {
+        display: flex;
+        align-items: center;
+        color: $clr_black;
+
+        &.active {
+          color: $clr_white;
+        }
+
+        i {
+          max-width: 25px;
+          flex: 0 0 25px;
+          margin-right: 10px;
+          text-align: center;
+        }
+      }
+
+
+    }
+
+    @media screen and (max-width: 512px) {
+      position: absolute;
+      height: calc(100% - 56px);
+    }
+  }
+}
+
+p {
+  margin: 0;
+}
+
+a,
+a:hover,
+a:focus {
+  color: $clr_black;
+  text-decoration: unset;
+}
+
+img {
+  display: inline-block;
+
+  .img {
+    width: 100%;
+  }
+}
+
+ul,
+li {
+  list-style-type: unset;
+}
+
+.section {
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+@import './pages/login.scss';
+@import './pages/home.scss';

@@ -1,0 +1,92 @@
+html {
+  scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  height: 100vh; }
+  body .header-bar {
+    cursor: default;
+    height: 56px; }
+    body .header-bar .navbar {
+      height: inherit; }
+    body .header-bar .button-sidenav {
+      cursor: pointer;
+      margin-right: 15px;
+      font-weight: 700; }
+    body .header-bar .logo-page {
+      font-size: 24px; }
+  body .main-content {
+    height: calc(100% - 56px);
+    overflow-y: auto; }
+    body .main-content .content-inner {
+      overflow-y: auto; }
+  body .side-bar {
+    width: 280px;
+    margin-left: -280px;
+    transition: margin .3s ease-in-out; }
+    body .side-bar .nav-pills {
+      overflow: auto;
+      display: flex;
+      flex-wrap: wrap; }
+      body .side-bar .nav-pills .nav-item {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%; }
+    body .side-bar.active {
+      margin-left: 0; }
+    body .side-bar .nav-item {
+      cursor: pointer; }
+      body .side-bar .nav-item .nav-link {
+        display: flex;
+        align-items: center;
+        color: #000000; }
+        body .side-bar .nav-item .nav-link.active {
+          color: #ffffff; }
+        body .side-bar .nav-item .nav-link i {
+          max-width: 25px;
+          flex: 0 0 25px;
+          margin-right: 10px;
+          text-align: center; }
+    @media screen and (max-width: 512px) {
+      body .side-bar {
+        position: absolute;
+        height: calc(100% - 56px); } }
+
+p {
+  margin: 0; }
+
+a,
+a:hover,
+a:focus {
+  color: #000000;
+  text-decoration: unset; }
+
+img {
+  display: inline-block; }
+  img .img {
+    width: 100%; }
+
+ul,
+li {
+  list-style-type: unset; }
+
+.section:not(:last-child) {
+  margin-bottom: 25px; }
+
+.section-login {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+.section .login-logo {
+  max-width: 125px; }
+.section .login-form {
+  width: 35%; }
+.section .form-handle .forgot-password {
+  font-size: 12px; }
+
+/*# sourceMappingURL=main.css.map */
