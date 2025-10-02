@@ -13,13 +13,28 @@
 </head>
 
 <body>
-  <header class="header-bar">
+  <header class="header-bar container-fluid">
     <nav class="navbar sticky-top bg-body-tertiary">
       <div class="container-fluid">
         <p class="logo-page d-flex align-items-center">
           <i id="toggleSidebar" class="fa-solid fa-bars button-sidenav"></i>
           Health Care
         </p>
+        <div class="dropdown">
+          <a href="javascript:void(0)" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+            id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../assets/images/a_gamer.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>User name</strong>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="javascript:void(0)">Settings</a></li>
+            <li><a class="dropdown-item" href="javascript:void(0)">Profile</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="javascript:void(0)">Sign out</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
   </header>
