@@ -1,0 +1,31 @@
+# Apache Configuration for Hospital Management System
+
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Redirect to login if not logged in
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/hospital-management/modules/auth/login.php
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Disable Directory Browsing
+Options -Indexes
+
+# PHP Settings
+<IfModule mod_php7.c>
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+    php_value max_execution_time 300
+    php_value max_input_time 300
+</IfModule>
+
+# Custom Error Pages (optional)
+# ErrorDocument 404 /hospital-management/errors/404.html
+# ErrorDocument 500 /hospital-management/errors/500.html

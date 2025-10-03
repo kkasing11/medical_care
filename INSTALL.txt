@@ -1,0 +1,65 @@
+========================================
+HƯỚNG DẪN CÀI ĐẶT NHANH
+HỆ THỐNG QUẢN LÝ BỆNH ÁN
+========================================
+
+BƯỚC 1: CÀI ĐẶT XAMPP
+----------------------
+1. Tải XAMPP: https://www.apachefriends.org/
+2. Cài đặt vào C:\xampp
+3. Khởi động Apache và MySQL
+
+BƯỚC 2: COPY PROJECT
+----------------------
+Copy thư mục hospital-management vào:
+C:\xampp\htdocs\
+
+BƯỚC 3: TẠO DATABASE
+----------------------
+1. Mở: http://localhost/phpmyadmin
+2. Tab "SQL"
+3. Copy nội dung file: database/setup.sql
+4. Paste và click "Go"
+
+BƯỚC 4: TRUY CẬP WEBSITE
+----------------------
+Mở trình duyệt: http://localhost/hospital-management
+
+========================================
+TÀI KHOẢN MẪU
+========================================
+
+BÁC SĨ:
+- Username: bs_nguyen  | Password: 123456
+- Username: bs_tran    | Password: 123456
+- Username: bs_le      | Password: 123456
+
+========================================
+KIỂM TRA CÀI ĐẶT
+========================================
+
+✓ Apache đang chạy (XAMPP)
+✓ MySQL đang chạy (XAMPP)
+✓ Database 'benh_vien' đã được tạo
+✓ Truy cập được: http://localhost/hospital-management
+
+========================================
+LỖI THƯỜNG GẶP
+========================================
+
+1. "Access denied for user"
+   → Kiểm tra config/config.php
+   → Mặc định: user='root', pass=''
+
+2. "Table doesn't exist"
+   → Chạy lại file database/setup.sql
+
+3. Trang trắng
+   → Kiểm tra Apache đã chạy
+   → Kiểm tra đường dẫn đúng
+
+========================================
+LIÊN HỆ HỖ TRỢ
+========================================
+
+Chi tiết đầy đủ xem file: README.md
